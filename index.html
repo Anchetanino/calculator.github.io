@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-image: url('Background.png');
+            background-size: cover;
+            justify-content: end;
+            display: flex;
+            height: 100vh;
+        }
+        
+        img {
+            height: 50%;
+            align-self: flex-end;
+        }
+        
+        main {
+            background-color: #EFE6FF;
+            border: 10px solid #2D2B2E;
+            border-radius: 25px;
+            height: 350px;
+            width: 450px;
+            margin: 10px;
+        }
+        
+        .history,
+        .result {
+            display: grid;
+            grid-template-areas: 'history history history history history' 'result result result result result';
+            background-color: #FAEDB6;
+            height: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .result {
+            grid-area: result;
+            justify-content: flex-end;
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 10px;
+        }
+        
+        .history {
+            grid-area: history;
+            text-align: start;
+            margin-top: 15px;
+            padding: 10px;
+        }
+        
+        .numpad {
+            display: grid;
+            grid-template-areas: 'seven eight nine ex ac' ' four five six divide multiple' 'one two three add subtract' 'zero zero dot add equals';
+            margin-top: 15px;
+            gap: 20px;
+            padding: 10px;
+        }
+        
+        .pad {
+            background-color: #2D2B2E;
+            color: white;
+            text-align: center;
+        }
+        
+        #dot {
+            grid-area: dot;
+        }
+        
+        #one {
+            grid-area: one;
+        }
+        
+        #two {
+            grid-area: two;
+        }
+        
+        #three {
+            grid-area: three;
+        }
+        
+        #four {
+            grid-area: four;
+        }
+        
+        #five {
+            grid-area: five;
+        }
+        
+        #six {
+            grid-area: six;
+        }
+        
+        #seven {
+            grid-area: seven;
+        }
+        
+        #eight {
+            grid-area: eight;
+        }
+        
+        #nine {
+            grid-area: nine;
+        }
+        
+        #ten {
+            grid-area: ten;
+        }
+        
+        #zero {
+            grid-area: zero;
+        }
+        
+        #multiple {
+            grid-area: multiple;
+        }
+        
+        #add {
+            grid-area: add;
+        }
+        
+        #subtract {
+            grid-area: subtract;
+        }
+        
+        #divide {
+            grid-area: divide;
+        }
+        
+        #equals {
+            grid-area: equals;
+        }
+        
+        #ex {
+            grid-area: ex;
+        }
+        
+        #ac {
+            grid-area: ac;
+        }
+        
+        @media screen and (min-width:980px) {
+            body {
+                display: block;
+            }
+            img {
+                height: 100%;
+                align-self: flex-end;
+                float: right;
+            }
+            main {
+                margin: 40px;
+                padding: 20px;
+                height: 500px;
+                width: 700px;
+                float: left;
+            }
+            .pad {
+                height: 50px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <div class="calculator">
+            <div class="history" id="history"> </div>
+            <div class="result" id="result"> </div>
+        </div>
+        <form class="numpad">
+            <div class="pad" id="dot">.</div>
+            <div class="pad" id="zero">0</div>
+            <div class="pad" id="one">1</div>
+            <div class="pad" id="two">2</div>
+            <div class="pad" id="three" value="3">3</div>
+            <div class="pad" id="four" value="4">4</div>
+            <div class="pad" id="five" value="5">5</div>
+            <div class="pad" id="six" value="6">6</div>
+            <div class="pad" id="seven" value="7">7</div>
+            <div class="pad" id="eight" value="8">8</div>
+            <div class="pad" id="nine" value="9">9</div>
+            <div class="pad" id="divide" value="/">/</div>
+            <div class="pad" id="multiple" value="*">*</div>
+            <div class="pad" id="add" value="+">+</div>
+            <div class="pad" id="subtract" value="-">-</div>
+            <div class="pad" id="equals">=</div>
+            <div class="pad" id="c" value="C">C</div>
+            <div class="pad" id="ac" value="AC">AC</div>
+        </form>
+    </main>
+
+    <img src="GuyBG.png" alt="">
+    <script type="text/javascript" src="index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
